@@ -1,0 +1,110 @@
+.subscription
+	&__section
+		padding: 2rem 0 13.2rem
+
+		@include mobile-hr
+			padding: 2rem 0 8rem
+
+	&__container
+		display: flex
+		align-self: stretch
+		justify-content: space-between
+
+		@include tablet
+			flex-wrap: wrap
+
+	&__card
+		flex: 0 0 calc(100% / 2 - 30px / 2)
+		max-width: calc(100% / 2 - 30px / 2)
+		min-height: 200px
+		background: $color-accent
+		color: $color-white
+		padding: 3rem 4rem 3.5rem
+
+		@include laptop
+			padding: 2rem
+
+		@include tablet
+			flex: 1 1 100%
+			max-width: 100%
+			margin-bottom: 3rem
+
+		@include mobile
+			text-align: center
+
+	&__icon
+		svg
+			width: 140px
+
+			@include laptop
+				width: 100px
+
+			@include tablet
+				width: 140px
+
+			@include mobile-hr
+				width: 100px
+
+		@include mobile
+			display: none
+
+	&__subtitle
+		padding-bottom: 2rem
+
+	&__desc
+		padding-bottom: 2.5rem
+
+.form
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+
+		@include tablet
+			justify-content: space-between
+
+
+	&__inner
+		max-width: 251px
+		margin-right: 6.5rem
+
+		@include laptop
+			margin-right: 3rem
+
+		@include tablet
+			max-width: none
+			width: 100%
+
+		@include mobile
+			margin-right: 0
+
+
+	&__item
+		width: 225px
+
+		@include mobile
+			width: auto
+
+	&__input
+		background: $color-white
+		border: 1px solid $color-white
+		outline: none
+		border-radius: 30px
+		padding: 1rem 2.5rem
+		width: 100%
+		font-family: $font-family-Roboto
+		font-size: 1.4rem
+		font-weight: 400
+		color: $color-mine-shaft
+
+		@include placeholder
+			color: #C4C4C4
+			font-family: $font-family-Roboto
+			font-size: 1.4rem
+			font-weight: 400
+
+
+
+
+
+

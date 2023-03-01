@@ -1,0 +1,31 @@
+@import "../components/logo"
+@import "../components/contacts"
+@import "../components/menu"
+
+.header
+	width: 100%
+
+	&__top-menu
+		width: 100%
+		background: $color-gallery
+		color: $color-mine-shaft
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 2rem 0
+
+	&__bottom-menu
+		padding: 0.5rem 0 1rem
+		border-top: 1px solid $color-gallery
+
+		@include mobile-hr
+			display: none
+
+	&__contacts
+		@include mobile-hr
+			display: none
+
+
+

@@ -1,0 +1,21 @@
+.contacts
+	@include tablet
+		text-align: right
+
+	@include mobile-hr
+		text-align: center
+
+	&__phone
+		padding-right: 3.5rem
+		transition: color .3s
+
+		&:not([disabled]):hover,
+		&:not([disabled]):focus,
+		&:not([disabled]):active
+			color: $color-accent
+
+		@include tablet
+			display: block
+			padding-right: 1rem
+			padding-bottom: 2rem
+

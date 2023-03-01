@@ -1,0 +1,55 @@
+.offers
+	&__section
+		padding: 8rem 0
+	&__title
+		font-size: 2.4rem
+		padding-bottom: 3rem
+
+		@include mobile
+			font-size: 2.2rem
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: stretch
+		justify-content: flex-start
+
+
+.offer
+	background: $color-white
+	flex: 0 0 calc(100% / 4 - 30px * 3 / 4)
+	padding: 2.5rem 3rem
+	text-align: center
+
+	@include laptop
+		flex: 0 1 calc(100% / 2 - 30px / 2)
+		margin-bottom: 3rem
+
+	@include mobile
+		flex: 1 1 100%
+
+	&:not(:nth-child(4n))
+		margin-right: 3rem
+
+		@include laptop
+			margin-right: 0
+
+	&:not(:nth-child(2n))
+		@include laptop
+			margin-right: 3rem
+		@include mobile
+			margin-right: 0
+
+	&__img
+		width: 125px
+		height: auto
+
+	&__desc
+		padding: 2rem 0 1.5rem
+
+	&__price
+		display: block
+		padding-bottom: 1rem
+		font-size: 2.1rem
+		letter-spacing: 0.05em
+

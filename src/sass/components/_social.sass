@@ -1,0 +1,32 @@
+.social
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	padding: 1rem 0
+
+	&__item
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		border: 2px solid $color-accent
+
+		&:not(:last-child)
+			margin-right: 2rem
+
+			@include laptop
+				margin-right: 1.5rem
+
+	&__icon
+		fill: $color-accent
+		width: 22px
+
+		&--vk
+			width: 22px
+
+		&--fb
+			width: 11px
+
+

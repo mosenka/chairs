@@ -1,0 +1,111 @@
+.menu
+	flex: 1 1 auto
+	width: 100%
+	text-align: center
+	z-index: 99
+
+	@include mobile-hr
+		position: fixed
+		right: -110vw
+		top: 0
+		width: auto
+		width: 100%
+		height: 100%
+		overflow-y: auto
+		background: $color-white
+		transition: right .4s
+
+
+
+	&.is-open
+		@include mobile-hr
+			right: 0
+
+	&__body
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 100%
+
+		@include mobile-hr
+			flex-direction: column
+			//align-items: flex-start
+			justify-content: flex-start
+			padding: 8rem 0
+
+	&__item
+		position: relative
+
+	&__link
+		display: inline-block
+		text-align: center
+		padding: 1.6rem 1.6rem
+		transition: color .3s
+
+		&:not([disabled]):hover
+			color: $color-accent
+
+		@include tablet
+			padding: 1.6rem 1rem
+
+	&__button
+		display: none
+		position: relative
+		z-index: 99
+		padding: 0
+		background: transparent
+		border: none
+		outline: none
+		width: 36px
+		height: 24px
+		flex-direction: column
+		align-items: flex-end
+		justify-content: space-between
+
+		@include mobile-hr
+			display: flex
+
+		&::after, &::before
+			position: relative
+			content: ''
+			display: block
+
+		span, &::after, &::before
+			width: 100%
+			height: 3px
+			background: $color-accent
+			transition: all .3s
+
+		&::after
+			width: 50%
+
+		&.is-open
+			&::after
+				opacity: 0
+
+			&::before
+				transform: rotate(45deg)
+				top: 50%
+
+			span
+				transform: rotate(-45deg)
+				top: 50%
+
+.top-menu
+	&__contacts
+		display: none
+
+		@include mobile-hr
+			display: block
+
+.bottom-menu
+	&__link
+		padding: 2rem
+
+		@include tablet
+			padding: 2rem 1rem
+
+		@include mobile-hr
+			padding: 0
+
+

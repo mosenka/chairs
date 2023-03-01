@@ -1,0 +1,31 @@
+<header class="header">
+	<div class="header__top-menu">
+		<div class="container">
+			@@include('../components/menu-top.html', {
+				"class": "top-menu",
+			})
+		</div>
+	</div>
+	<div class="container">
+		<div class="header__inner">
+			<a href="/" class="logo">
+				<img src="./img/logo.svg" alt="BEAUTY" class="logo__img" width="80" height="80">
+				<span class="text--bold logo__text">BEAUTY</span>
+			</a>
+			@@include("../components/contacts.html", {
+				"class": "header"
+			})
+			<button type="button" class="menu__button"><span></span></button>
+		</div>
+
+	</div>
+	<div class="header__bottom-menu">
+		<div class="container">
+			@@include("../components/menu-bottom.html")
+		</div>
+	</div>
+
+
+</header>
+
+

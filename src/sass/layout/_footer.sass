@@ -1,0 +1,68 @@
+@import "../components/social"
+
+.footer
+	width: 100%
+	background: $color-white
+
+	&__contacts-wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 2.7rem 0
+
+		@include tablet
+			flex-wrap: wrap
+			justify-content: center
+			align-items: flex-start
+
+	&__address
+		text-align: center
+
+		@include tablet
+			flex: 1 1 auto
+			width: 100%
+			padding: 1rem 0
+
+	&__phone
+		display: inline-block
+
+		@include mobile
+			display: block
+			width: 100%
+			padding: 0 0 1rem 1rem
+
+
+.footer-contacts
+	text-align: center
+	padding: 1rem 0
+
+.last-line
+	width: 100%
+	padding: 2.5rem 0
+	background: $color-gallery
+	color: $color-gray
+
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		@include tablet
+			flex-wrap: wrap
+			text-align: center
+
+	&__link
+		transition: color .3s
+
+		&:not([disabled]):hover, &:not([disabled]):focus, &:not([disabled]):active
+			color: $color-accent
+
+		@include tablet
+			width: 100%
+
+	&__rights
+		@include tablet
+			display: inline-block
+			width: 100%
+			padding-bottom: 1rem
+
